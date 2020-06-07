@@ -281,7 +281,22 @@
                                         @if (Route::has('login'))
                                             @auth
                                                 <li class="dropdown">
-                                                    <a href="{{ url('/home') }}">Home</a>
+                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                        TEST
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="dropdown-submenu">
+                                                            <a class="dropdown-item" href="#">Embeded System</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <a class="dropdown-item"
+                                                                       href="shop-product-full-width.html">ARM</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="shop-4-columns.html">4 Columns</a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             @else
                                                 <li class="dropdown">
