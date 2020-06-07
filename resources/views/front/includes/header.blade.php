@@ -285,11 +285,11 @@
                                                 </li>
                                             @else
                                                 <li class="dropdown">
-                                                    <a href="{{ route('frontLogin') }}">Login</a>
+                                                    <a href="{{route('frontLogin')}}">Login</a>
                                                 </li>
                                                 @if (Route::has('register'))
                                                     <li class="dropdown">
-                                                        <a href="{{ route('frontRegister') }}">Register</a>
+                                                        <a href="{{route('frontRegister')}}">Register</a>
                                                     </li>
                                                 @endif
                                             @endauth
