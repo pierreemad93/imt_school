@@ -39,7 +39,14 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+    /**
+     *  this puplic function
+     *
+     * redirect the path to our  front design
+     */
+    public  function frontRegister(){
+        return view('auth.front.register');
+    }
     /**
      * Get a validator for an incoming registration request.
      *

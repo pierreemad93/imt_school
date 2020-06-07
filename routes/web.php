@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('front.index');
 });
 
+Route::group(['namespace' =>  'Auth' ] , function (){
+    Route::get('/login', 'LoginController@frontLogin')->name('frontLogin');
+    Route::get('/register', 'RegisterController@frontRegister')->name('frontRegister');
+});
+
+
 
 Auth::routes();
 
