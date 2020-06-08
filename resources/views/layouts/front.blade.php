@@ -27,10 +27,17 @@
     <link rel="stylesheet" href="{{asset('assets/front/vendor/magnific-popup/magnific-popup.min.css')}}">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="{{asset('assets/front/css/theme.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/front/css/theme-elements.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/front/css/theme-blog.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/front/css/theme-shop.css')}}">
+    @if(LaravelLocalization::getCurrentLocaleDirection())
+        <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-elements.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-blog.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-shop.css')}}">
+        @else
+        <link rel="stylesheet" href="{{asset('assets/front/css/theme.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/theme-elements.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/theme-blog.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/theme-shop.css')}}">
+    @endif
 
     <!-- Current Page CSS -->
     <link rel="stylesheet" href="{{asset('assets/front/vendor/rs-plugin/css/settings.css')}}">
@@ -47,6 +54,7 @@
     <script src="{{asset('assets/front/vendor/modernizr/modernizr.min.js')}}"></script>
 
 </head>
+{{-- dir="{{(LaravelLocalization::getCurrentLocaleDirection('ar')  ? 'rtl' : 'ltr')}}" --}}
 <body>
 <div class="body">
    {{--Start header--}}
