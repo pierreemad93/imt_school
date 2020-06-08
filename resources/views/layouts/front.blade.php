@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{asset('assets/front/vendor/magnific-popup/magnific-popup.min.css')}}">
 
     <!-- Theme CSS -->
-    @if(LaravelLocalization::getCurrentLocaleDirection())
+    @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
         <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-elements.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-blog.css')}}">
