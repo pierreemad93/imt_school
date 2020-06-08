@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-Route::group(['namespace' =>  'Auth' ] , function (){
-    Route::get('/site/login', 'LoginController@frontLogin')->name('frontLogin');
-    Route::get('/site/register', 'RegisterController@frontRegister')->name('frontRegister');
-});
+//Route::group(['namespace' =>  'Auth' ] , function (){
+//    Route::get('/site/login', 'LoginController@frontLogin')->name('frontLogin');
+//    Route::get('/site/register', 'RegisterController@frontRegister')->name('frontRegister');
+//});
 
 
 
