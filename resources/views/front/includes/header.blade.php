@@ -282,19 +282,20 @@
                                             @auth
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle" href="#">
-                                                        TEST
+                                                        {{Auth::user()->name}}
                                                     </a>
                                                     <ul class="dropdown-menu">
-                                                        <li class="dropdown-submenu">
-                                                            <a class="dropdown-item" href="#">Embeded System</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li>
-                                                                    <a class="dropdown-item"
-                                                                       href="shop-product-full-width.html">ARM</a>
-                                                                </li>
-                                                            </ul>
+                                                        <li>
+                                                            <a class="dropdown-item" href="shop-4-columns.html">4
+                                                                Columns</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="shop-4-columns.html">4 Columns</a>
+                                                        <li class="">
+                                                            <a class="dropdown-item" href="{{route('logout')}}"
+                                                               onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{__('Logout')}}</a>
+                                                            <form id="logout-form" action="{{route('logout')}}"
+                                                                  method="POST" style="display:none">
+                                                                @csrf
+                                                            </form>
                                                         </li>
                                                     </ul>
                                                 </li>

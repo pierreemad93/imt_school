@@ -15,13 +15,8 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-//Route::group(['namespace' =>  'Auth' ] , function (){
-//    Route::get('/site/login', 'LoginController@frontLogin')->name('frontLogin');
-//    Route::get('/site/register', 'RegisterController@frontRegister')->name('frontRegister');
-//});
 
 
+Auth::routes(['verify' => true]);
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
