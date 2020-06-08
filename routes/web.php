@@ -11,12 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ], function () {
+                      Route::get('/', function () {
+                           return view('front.index');
+                      });
+                      Auth::routes(['verify' => true]);
+
+                      Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 });
 
 
 
-Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');

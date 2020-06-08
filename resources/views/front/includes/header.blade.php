@@ -26,17 +26,25 @@
                                     <a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i>
                                         Contact Us</a>
                                 </li>
+                                <ul>
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                                 <li class="nav-item dropdown nav-item-left-border d-none d-sm-block nav-item-left-border-remove nav-item-left-border-md-show">
                                     <a class="nav-link" href="#" role="button" id="dropdownLanguage"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="{{asset('assets/front/img/blank.gif')}}" class="flag flag-us"
-                                             alt="English"/> English
+                                             alt="English"/>ِEnglish
                                         <i class="fas fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownLanguage">
-                                        <a class="dropdown-item" href="#"><img
-                                                src="{{asset('assets/front/img/blank.gif')}}" class="flag flag-us "
-                                                alt="English"/> English</a>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="{{asset('assets/front/img/blank.gif')}}" class="flag flag-us" alt="English"/> English</a>
                                         <a class="dropdown-item" href="#"><img
                                                 src="{{asset('assets/front/img/blank.gif')}}" class="flag flag-eg"
                                                 alt="Arabic"/> Arabic</a>
