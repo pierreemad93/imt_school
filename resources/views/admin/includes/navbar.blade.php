@@ -5,7 +5,7 @@
             <i class="ti-align-justify"></i>
         </a>
         <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.png" alt="Clip-Two"/>
+            <img src="{{asset('assets/admin/assets/images/logo.png')}}" alt="Clip-Two"/>
         </a>
         <a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
             <i class="ti-align-justify"></i>
@@ -97,7 +97,7 @@
                         <div class="drop-down-wrapper ps-container">
                             <div class="list-group no-margin">
                                 <a class="media list-group-item" href="">
-                                    <img class="img-circle" alt="..." src="assets/images/avatar-1.jpg">
+                                    <img class="img-circle" alt="..." src="{{asset('assets/admin/assets/images/avatar-1.jpg')}}">
                                     <span class="media-body block no-margin"> Use awesome animate.css <small class="block text-grey">10 minutes ago</small> </span>
                                 </a>
                                 <a class="media list-group-item" href="">

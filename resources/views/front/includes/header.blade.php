@@ -297,7 +297,7 @@
                                                         {{-- check permission if you are admin | auther --}}
                                                         @if( Auth::user()->permission == '1' || Auth::user()->permission == '2')
                                                             <li>
-                                                                <a class="dropdown-item" href="{{route('user.profile')}}">Dashboard</a>
+                                                                <a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard</a>
                                                             </li>
                                                         @endif
                                                         {{-- End if condition--}}
