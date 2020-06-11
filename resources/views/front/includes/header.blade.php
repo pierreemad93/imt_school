@@ -294,8 +294,7 @@
                                                     </a>
                                                     <ul class="dropdown-menu">
                                                         <li>
-                                                            <a class="dropdown-item" href="shop-4-columns.html">4
-                                                                Columns</a>
+                                                            <a class="dropdown-item" href="{{route('user.profile')}}">Profile</a>
                                                         </li>
                                                         <li class="">
                                                             <a class="dropdown-item" href="{{route('logout')}}"

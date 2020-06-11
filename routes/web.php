@@ -11,17 +11,18 @@
 |
 */
 
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-    ], function () {
-                      Route::get('/', function () {
-                           return view('front.index');
-                      });
-                      Auth::routes(['verify' => true]);
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']],function () {
+       Route::get('/', function () {
+            return view('front.index');
+        });
 
-                      Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+       Route::group(['namespace' => 'Front'] , function (){
+           Route::get('/profile' , 'ProfileController@index')->name('user.profile');
+       });
+
+       Auth::routes(['verify' => true]);
+
+       Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 });
 
 
