@@ -293,6 +293,14 @@
                                                         {{Auth::user()->name}}
                                                     </a>
                                                     <ul class="dropdown-menu">
+                                                        {{-- Start if condition--}}
+                                                        {{-- check permission if you are admin | auther --}}
+                                                        @if( Auth::user()->permission == '1' || Auth::user()->permission == '2')
+                                                            <li>
+                                                                <a class="dropdown-item" href="{{route('user.profile')}}">Dashboard</a>
+                                                            </li>
+                                                        @endif
+                                                        {{-- End if condition--}}
                                                         <li>
                                                             <a class="dropdown-item" href="{{route('user.profile')}}">Profile</a>
                                                         </li>
