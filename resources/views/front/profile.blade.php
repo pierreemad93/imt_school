@@ -41,19 +41,19 @@
                     <div class="form-group row">
                         <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First name</label>
                         <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="John">
+                            <input class="form-control" required type="text" value="">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last name</label>
                         <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="Doe">
+                            <input class="form-control" required type="text" value="">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
                         <div class="col-lg-9">
-                            <input class="form-control" required type="email" value="email@gmail.com">
+                            <input class="form-control" required type="email" value="{{$userProfile->email}}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -101,7 +101,7 @@
                     <div class="form-group row">
                         <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
                         <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="">
+                            <input class="form-control" required type="text" value="{{$userProfile->name}}">
                         </div>
                     </div>
                     <div class="form-group row">
