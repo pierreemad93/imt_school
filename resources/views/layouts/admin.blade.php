@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <!-- start: HEAD -->
 <head>
-    <title>@yield('title')| Adminpanel</title>
+    <title>@yield('title') Home | Adminpanel</title>
     <!-- start: META -->
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
     <meta charset="utf-8" />
@@ -31,6 +31,9 @@
     <!-- start: CLIP-TWO CSS -->
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/plugins.css')}}">
+    @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
+        <link rel="stylesheet" href="{{asset('assets/admin/assets/css/rtl.css')}}">
+    @endif
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/themes/theme-1.css')}}" id="skin_color" />
     <!-- end: CLIP-TWO CSS -->
     <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->

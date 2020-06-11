@@ -117,31 +117,23 @@
             <!-- start: LANGUAGE SWITCHER -->
             <li class="dropdown">
                 <a href class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="ti-world"></i> English
+                    <i class="ti-world"></i> {{ LaravelLocalization::getCurrentLocaleName() }}
                 </a>
                 <ul role="menu" class="dropdown-menu dropdown-light fadeInUpShort">
-                    <li>
-                        <a href="#" class="menu-toggler">
-                            Deutsch
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu-toggler">
-                            English
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="menu-toggler">
-                            Italiano
-                        </a>
-                    </li>
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        <li class="menu-toggler">
+                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                {{ $properties['native'] }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </li>
             <!-- start: LANGUAGE SWITCHER -->
             <!-- start: USER OPTIONS DROPDOWN -->
             <li class="dropdown current-user">
                 <a href class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="assets/images/avatar-1.jpg" alt="Peter"> <span class="username">Peter <i class="ti-angle-down"></i></i></span>
+                    <img src="{{asset('assets/admin/assets/images/avatar-1.jpg')}}" alt="Peter"> <span class="username">Peter <i class="ti-angle-down"></i></i></span>
                 </a>
                 <ul class="dropdown-menu dropdown-dark">
                     <li>
