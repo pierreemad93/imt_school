@@ -15,6 +15,7 @@
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function (){
     Route::group(['namespace' => 'Admin'] , function (){
         Route::get('/dashboard','DashboardController@index')->name('admin.dashboard');
+        Route::resource('/users' , 'UsersController');
     });
 });
 
