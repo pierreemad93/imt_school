@@ -92,6 +92,10 @@
                     </tbody>
                 </table>
             </div>
+            <div class="center">
+                {{$rows->links()}}
+
+            </div>
         </div>
     </div>
 @endsection
