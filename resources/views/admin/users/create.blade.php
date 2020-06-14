@@ -20,6 +20,7 @@
                         <div class="panel panel-white">
                             <div class="panel-body">
                                 <form role="form" method="POST" action="{{route('users.store')}}">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
                                             First Name
@@ -38,29 +39,38 @@
                                         <label for="exampleInputEmail1">
                                             Username
                                         </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1"
                                                placeholder="Enter username" name="name">
+                                        @error('name')
+                                           <div class="is-invalid">{{$message}}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
                                             Email address
                                         </label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1"
                                                placeholder="Enter email" name="email">
+                                        @error('email')
+                                        <div class="is-invalid">{{$message}}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">
                                             Password
                                         </label>
                                         <input type="password" class="form-control" id="exampleInputPassword1"
-                                               placeholder="Password" name="password">
+                                               placeholder="Password" value="12345678" name="password">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">
                                             Phone
                                         </label>
-                                        <input type="tel" class="form-control" id="exampleInputPassword1"
+                                        <input type="tel" class="form-control @error('phone') is-invalid @enderror" id="exampleInputPassword1"
                                                placeholder="Enter you phone" name="phone">
+                                        @error('phone')
+                                        <div class="is-invalid">{{$message}}</div>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="btn btn-o btn-primary">
                                         Submit

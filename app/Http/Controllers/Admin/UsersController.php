@@ -41,21 +41,30 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-        $rules = $this->getRules();
         $data = $request->all();
+
+        $rules = [
+            'name' => 'required|unique:users,name|max:100|string',
+            'email' => 'required|unique:users,email|max:100|string',
+            'password' => 'required|string|min:8|max:32',
+        ];;
         $validator = Validator::make($data , $rules);
+
         if($validator->fails()){
-            return  $validator->errors();
+           return redirect()
+                             ->back()
+                             ->withErrors($validator)
+                             ->withInputs($request->all());
         }
 
-        protected function getRules()
-        {
-            return $rules = [
-                'name' => 'required|unique:users,name|max:100|string',
-                'email' => 'required|unique:users,email|max:100|string',
-                'password' => 'required|string|min:8|max:32',
-            ];
-        }
+        //insert at database
+        User::create([
+               'name' => $request->name,
+               'email' => $request->email,
+               'password' => $request->password,
+
+            ]);
+
     }
 
     /**
