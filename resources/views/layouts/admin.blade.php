@@ -24,9 +24,9 @@
     <link rel="stylesheet" href="{{asset('assets/admin/vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/admin/vendor/fontawesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/admin/vendor/themify-icons/themify-icons.min.css')}}">
-    <link href="{{asset('assets/admin/vendor/animate.css/animate.min.css')}}" rel="stylesheet" media="screen">
-    <link href="{{asset('assets/admin/vendor/perfect-scrollbar/perfect-scrollbar.min.css')}}" rel="stylesheet" media="screen">
-    <link href="{{asset('assets/admin/vendor/switchery/switchery.min.css')}}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{{asset('assets/admin/vendor/animate.css/animate.min.css')}}"  media="screen">
+    <link rel="stylesheet" href="{{asset('assets/admin/vendor/perfect-scrollbar/perfect-scrollbar.min.css')}}"  media="screen">
+    <link rel="stylesheet" href="{{asset('assets/admin/vendor/switchery/switchery.min.css')}}"  media="screen">
     <!-- end: MAIN CSS -->
     <!-- start: CLIP-TWO CSS -->
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/styles.css')}}">
