@@ -3,10 +3,10 @@
     <div class="container py-4">
         <div class="row align-items-center">
             <div class="col-md-6 appear-animation animated fadeInLeftShorter appear-animation-visible"
-                 data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1000"
-                 style="animation-delay: 1000ms;">
+                 data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="800"
+                 style="animation-delay: 800ms;">
                 <div class="owl-carousel owl-theme nav-inside mb-0 owl-loaded owl-drag owl-carousel-init"
-                     data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 6000, 'loop': true}"
+                     data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000, 'loop': true}"
                      style="height: auto;">
                     <div class="owl-stage-outer">
                         <div class="owl-stage" style="transform: translate3d(-1650px, 0px, 0px); transition: all 0s ease 0s; width: 3300px;">
@@ -22,7 +22,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="owl-nav disabled">
                         <button type="button" role="presentation" class="owl-prev"></button>
                         <button type="button" role="presentation" class="owl-next"></button>
