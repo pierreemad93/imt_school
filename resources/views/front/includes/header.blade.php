@@ -6,9 +6,9 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="index.html">
+                            <a href="">
                                 <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40"
-                                     data-sticky-top="25" src="img/logo.png">
+                                     data-sticky-top="25" src="{{asset('assets/front/img/imt_logo.jpg')}}" style="height:10vh">
                             </a>
                         </div>
                     </div>
