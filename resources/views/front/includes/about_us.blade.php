@@ -1,5 +1,8 @@
 <section class="pt-5 appear-animation" data-appear-animation="fadeInUpShorter">
     <div class="container-fluid">
+        <div class="heading heading-border heading-middle-border heading-middle-border-center">
+            <h1 class="font-weight-normal">About <strong class="font-weight-extra-bold">US</strong></h1>
+        </div>
         <div class="row">
             <div class="col-lg-6 p-0">
                 <section class="parallax section section-parallax match-height border-top-0" data-plugin-parallax=""

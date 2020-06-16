@@ -19,7 +19,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
        Route::group(['namespace' => 'Front'] , function (){
            Route::get('/profile' , 'ProfileController@index')->name('user.profile');
        });
-
+      ############Start Courses Route ############
+      Route::get('/full-diploma', function (){
+          return view('front.courses.full_diploma');
+      });
+      ############End Courses Route ############
        Auth::routes(['verify' => true]);
 
        Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');

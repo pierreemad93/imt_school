@@ -6,7 +6,7 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="">
+                            <a href="{{url('/')}}">
                                 <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40"
                                      data-sticky-top="25" src="{{asset('assets/front/img/imt_logo.jpg')}}" style="height:10vh">
                             </a>
@@ -119,7 +119,7 @@
                             <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="index.html">Home</a>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{url('/')}}">Home</a>
                                         </li>
                                         {{--                                        <li class="dropdown dropdown-mega">--}}
                                         {{--                                            <a class="dropdown-item dropdown-toggle" href="elements.html">--}}
@@ -267,6 +267,9 @@
                                                 Courses
                                             </a>
                                             <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item" href="{{url('/full-diploma')}}">Standard Embedded Systems Diploma</a>
+                                                </li>
                                                 <li class="dropdown-submenu">
                                                     <a class="dropdown-item" href="#">Embeded System</a>
                                                     <ul class="dropdown-menu">
@@ -275,8 +278,6 @@
                                                                href="shop-product-full-width.html">ARM</a>
                                                         </li>
                                                     </ul>
-                                                </li>
-                                                <li><a class="dropdown-item" href="shop-4-columns.html">4 Columns</a>
                                                 </li>
                                             </ul>
                                         </li>
