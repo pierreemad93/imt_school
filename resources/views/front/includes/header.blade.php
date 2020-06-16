@@ -51,7 +51,7 @@
 {{--                                    </div>--}}
 {{--                                </li>--}}
                                 <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-sm-show">
-                                    <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
+                                    <span class="ws-nowrap"><i class="fas fa-phone"></i> +(20) 101 998 6337</span>
                                 </li>
                             </ul>
                         </nav>

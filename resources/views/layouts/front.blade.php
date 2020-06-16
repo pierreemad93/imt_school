@@ -4,7 +4,7 @@
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Porto - Responsive HTML5 Template 7.5.0</title>
+    <title>IMT School</title>
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="Porto - Responsive HTML5 Template">
     <meta name="author" content="okler.net">

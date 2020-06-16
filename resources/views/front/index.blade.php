@@ -457,4 +457,7 @@
             </div>
         </section>
     </section>
+    {{-- Start Contact-us --}}
+    @include('front.includes.contact_us')
+    {{-- End Contact-us --}}
 @endsection
