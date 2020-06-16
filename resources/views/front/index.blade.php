@@ -76,131 +76,145 @@
                     </div>
 
                 </li>
-                {{--                 <li data-transition="fade">--}}
-                {{--                     <img src="img/slides/slide-bg.jpg"--}}
-                {{--                          alt=""--}}
-                {{--                          data-bgposition="center center"--}}
-                {{--                          data-bgfit="cover"--}}
-                {{--                          data-bgrepeat="no-repeat"--}}
-                {{--                          class="rev-slidebg">--}}
+                {{--                <li data-transition="fade">--}}
+                {{--                    <img src="{{asset('assets/front/img/slides/slide-bg.jpg')}}"--}}
+                {{--                         alt=""--}}
+                {{--                         data-bgposition="center center"--}}
+                {{--                         data-bgfit="cover"--}}
+                {{--                         data-bgrepeat="no-repeat"--}}
+                {{--                         class="rev-slidebg">--}}
 
-                {{--                     <div class="tp-caption tp-resizeme"--}}
-                {{--                          data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"opacity:0;x:100%;y:-100%;","to":"o:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-type="image"--}}
-                {{--                          data-x="right"--}}
-                {{--                          data-y="top"--}}
-                {{--                          data-width="['auto']"--}}
-                {{--                          data-height="['auto']"--}}
-                {{--                          data-basealign="slide"><img src="img/slides/slide-devices.jpg" alt=""></div>--}}
+                {{--                    <div class="tp-caption tp-resizeme"--}}
+                {{--                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"opacity:0;x:100%;y:-100%;","to":"o:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
+                {{--                         data-type="image"--}}
+                {{--                         data-x="right"--}}
+                {{--                         data-y="top"--}}
+                {{--                         data-width="['auto']"--}}
+                {{--                         data-height="['auto']"--}}
+                {{--                         data-basealign="slide"><img src="{{asset('assets/front/img/slides/slide-devices.jpg')}}" alt=""></div>--}}
 
-                {{--                     <div class="tp-caption tp-resizeme"--}}
-                {{--                          data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"opacity:0;x:-100%;y:-100%;","to":"o:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-type="image"--}}
-                {{--                          data-x="left"--}}
-                {{--                          data-y="center"--}}
-                {{--                          data-width="['auto']"--}}
-                {{--                          data-height="['auto']"--}}
-                {{--                          data-basealign="slide"><img src="img/slides/slide-laptop.jpg" alt=""></div>--}}
+                {{--                    <div class="tp-caption tp-resizeme"--}}
+                {{--                         data-frames='[{"delay":1500,"speed":2000,"frame":"0","from":"opacity:0;x:-100%;y:-100%;","to":"o:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
+                {{--                         data-type="image"--}}
+                {{--                         data-x="left"--}}
+                {{--                         data-y="center"--}}
+                {{--                         data-width="['auto']"--}}
+                {{--                         data-height="['auto']"--}}
+                {{--                         data-basealign="slide"><img src="{{asset('assets/front/img/slides/slide-laptop.jpg')}}" alt=""></div>--}}
 
-                {{--                     <div class="tp-caption tp-resizeme rs-parallaxlevel-7"--}}
-                {{--                          data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"opacity:0;x:-50%;y:-50%;","to":"opacity:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-type="image"--}}
-                {{--                          data-x="-500"--}}
-                {{--                          data-y="-700"--}}
-                {{--                          data-width="['auto']"--}}
-                {{--                          data-height="['auto']"--}}
-                {{--                          data-basealign="slide"><img src="img/slides/slide-parallax-porto-symbol.png" alt=""></div>--}}
+                {{--                    <div class="tp-caption tp-resizeme rs-parallaxlevel-7"--}}
+                {{--                         data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"opacity:0;x:-50%;y:-50%;","to":"opacity:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
+                {{--                         data-type="image"--}}
+                {{--                         data-x="-500"--}}
+                {{--                         data-y="-700"--}}
+                {{--                         data-width="['auto']"--}}
+                {{--                         data-height="['auto']"--}}
+                {{--                         data-basealign="slide"><img src="{{asset('assets/front/img/slides/slide-parallax-porto-symbol.png')}}" alt=""></div>--}}
 
-                {{--                     <div class="tp-caption"--}}
-                {{--                          data-x="center" data-hoffset="['-150','-150','-150','-240']"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="1000"--}}
-                {{--                          data-transform_in="x:[-300%];opacity:0;s:500;"--}}
-                {{--                          data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>--}}
+                {{--                    <div class="tp-caption"--}}
+                {{--                         data-x="center" data-hoffset="['-150','-150','-150','-240']"--}}
+                {{--                         data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
+                {{--                         data-start="1000"--}}
+                {{--                         data-transform_in="x:[-300%];opacity:0;s:500;"--}}
+                {{--                         data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt="">--}}
+                {{--                    </div>--}}
 
-                {{--                     <div class="tp-caption text-color-light font-weight-normal"--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="700"--}}
-                {{--                          data-fontsize="['22','22','22','40']"--}}
-                {{--                          data-lineheight="['25','25','25','45']"--}}
-                {{--                          data-transform_in="y:[-50%];opacity:0;s:500;">DO YOU NEED A NEW</div>--}}
+                {{--                    <div class="tp-caption text-color-light font-weight-normal"--}}
+                {{--                         data-x="center"--}}
+                {{--                         data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
+                {{--                         data-start="700"--}}
+                {{--                         data-fontsize="['22','22','22','40']"--}}
+                {{--                         data-lineheight="['25','25','25','45']"--}}
+                {{--                         data-transform_in="y:[-50%];opacity:0;s:500;">DO YOU NEED A NEW--}}
+                {{--                    </div>--}}
 
-                {{--                     <div class="tp-caption d-none d-md-block"--}}
-                {{--                          data-frames='[{"delay":2400,"speed":500,"frame":"0","from":"opacity:0;x:10%;","to":"opacity:1;x:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-x="center" data-hoffset="['80','80','80','135']"--}}
-                {{--                          data-y="center" data-voffset="['-33','-33','-33','-55']"><img src="img/slides/slide-blue-line.png" alt=""></div>--}}
+                {{--                    <div class="tp-caption d-none d-md-block"--}}
+                {{--                         data-frames='[{"delay":2400,"speed":500,"frame":"0","from":"opacity:0;x:10%;","to":"opacity:1;x:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
+                {{--                         data-x="center" data-hoffset="['80','80','80','135']"--}}
+                {{--                         data-y="center" data-voffset="['-33','-33','-33','-55']"><img--}}
+                {{--                            src="img/slides/slide-blue-line.png" alt=""></div>--}}
 
-                {{--                     <div class="tp-caption"--}}
-                {{--                          data-x="center" data-hoffset="['150','150','150','240']"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="1000"--}}
-                {{--                          data-transform_in="x:[300%];opacity:0;s:500;"--}}
-                {{--                          data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>--}}
+                {{--                    <div class="tp-caption"--}}
+                {{--                         data-x="center" data-hoffset="['150','150','150','240']"--}}
+                {{--                         data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
+                {{--                         data-start="1000"--}}
+                {{--                         data-transform_in="x:[300%];opacity:0;s:500;"--}}
+                {{--                         data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt="">--}}
+                {{--                    </div>--}}
 
-                {{--                     <div class="tp-caption font-weight-extra-bold text-color-light negative-ls-2"--}}
-                {{--                          data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center"--}}
-                {{--                          data-fontsize="['50','50','50','90']"--}}
-                {{--                          data-lineheight="['55','55','55','95']">WEB DESIGN?</div>--}}
+                {{--                    <div class="tp-caption font-weight-extra-bold text-color-light negative-ls-2"--}}
+                {{--                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
+                {{--                         data-x="center"--}}
+                {{--                         data-y="center"--}}
+                {{--                         data-fontsize="['50','50','50','90']"--}}
+                {{--                         data-lineheight="['55','55','55','95']">WEB DESIGN?--}}
+                {{--                    </div>--}}
 
-                {{--                     <div class="tp-caption font-weight-light"--}}
-                {{--                          data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center" data-voffset="['40','40','40','80']"--}}
-                {{--                          data-fontsize="['18','18','18','50']"--}}
-                {{--                          data-lineheight="['20','20','20','55']"--}}
-                {{--                          style="color: #b5b5b5;">Check out our options and features</div>--}}
+                {{--                    <div class="tp-caption font-weight-light"--}}
+                {{--                         data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'--}}
+                {{--                         data-x="center"--}}
+                {{--                         data-y="center" data-voffset="['40','40','40','80']"--}}
+                {{--                         data-fontsize="['18','18','18','50']"--}}
+                {{--                         data-lineheight="['20','20','20','55']"--}}
+                {{--                         style="color: #b5b5b5;">Check out our options and features--}}
+                {{--                    </div>--}}
 
-                {{--                 </li>--}}
-                {{--                 <li class="slide-overlay" data-transition="fade">--}}
-                {{--                     <img src="img/slides/slide-bg-2.jpg"--}}
-                {{--                          alt=""--}}
-                {{--                          data-bgposition="center center"--}}
-                {{--                          data-bgfit="cover"--}}
-                {{--                          data-bgrepeat="no-repeat"--}}
-                {{--                          class="rev-slidebg">--}}
+                {{--                </li>--}}
+                <li class="slide-overlay" data-transition="fade">
+                    <img src="{{asset('assets/front/img/slides/slide-2.jpg')}}"
+                         alt=""
+                         data-bgposition="center center"
+                         data-bgfit="cover"
+                         data-bgrepeat="no-repeat"
+                         class="rev-slidebg">
 
-                {{--                     <div class="tp-caption"--}}
-                {{--                          data-x="center" data-hoffset="['-170','-170','-170','-350']"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="1000"--}}
-                {{--                          data-transform_in="x:[-300%];opacity:0;s:500;"--}}
-                {{--                          data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>--}}
+                    <div class="tp-caption"
+                         data-x="center" data-hoffset="['-170','-170','-170','-350']"
+                         data-y="center" data-voffset="['-50','-50','-50','-75']"
+                         data-start="1000"
+                         data-transform_in="x:[-300%];opacity:0;s:500;"
+                         data-transform_idle="opacity:0.2;s:500;"><img
+                            src="{{asset('assets/front/img/slides/slide-title-border.png')}}" alt="">
+                    </div>
 
-                {{--                     <div class="tp-caption text-color-light font-weight-normal"--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="700"--}}
-                {{--                          data-fontsize="['16','16','16','40']"--}}
-                {{--                          data-lineheight="['25','25','25','45']"--}}
-                {{--                          data-transform_in="y:[-50%];opacity:0;s:500;">WE WORK HARD AND PORTO HAS</div>--}}
+                    <div class="tp-caption text-color-light font-weight-normal"
+                         data-x="center"
+                         data-y="center" data-voffset="['-50','-50','-50','-75']"
+                         data-start="700"
+                         data-fontsize="['16','16','16','40']"
+                         data-lineheight="['25','25','25','45']"
+                         data-transform_in="y:[-50%];opacity:0;s:500;">WE WORK HARD AND IMT HAS
+                    </div>
 
-                {{--                     <div class="tp-caption"--}}
-                {{--                          data-x="center" data-hoffset="['170','170','170','350']"--}}
-                {{--                          data-y="center" data-voffset="['-50','-50','-50','-75']"--}}
-                {{--                          data-start="1000"--}}
-                {{--                          data-transform_in="x:[300%];opacity:0;s:500;"--}}
-                {{--                          data-transform_idle="opacity:0.2;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>--}}
+                    <div class="tp-caption"
+                         data-x="center" data-hoffset="['170','170','170','350']"
+                         data-y="center" data-voffset="['-50','-50','-50','-75']"
+                         data-start="1000"
+                         data-transform_in="x:[300%];opacity:0;s:500;"
+                         data-transform_idle="opacity:0.2;s:500;"><img
+                            src="{{asset('assets/front/img/slides/slide-title-border.png')}}" alt="">
+                    </div>
 
-                {{--                     <div class="tp-caption font-weight-extra-bold text-color-light negative-ls-1"--}}
-                {{--                          data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center"--}}
-                {{--                          data-fontsize="['50','50','50','90']"--}}
-                {{--                          data-lineheight="['55','55','55','95']">THE BEST DESIGN</div>--}}
+                    <div class="tp-caption font-weight-extra-bold text-color-light negative-ls-1"
+                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+                         data-x="center"
+                         data-y="center"
+                         data-fontsize="['50','50','50','90']"
+                         data-lineheight="['55','55','55','95']">New Book
+                    </div>
 
-                {{--                     <div class="tp-caption font-weight-light ws-normal text-center"--}}
-                {{--                          data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'--}}
-                {{--                          data-x="center"--}}
-                {{--                          data-y="center" data-voffset="['60','60','60','105']"--}}
-                {{--                          data-width="['530','530','530','1100']"--}}
-                {{--                          data-fontsize="['18','18','18','40']"--}}
-                {{--                          data-lineheight="['26','26','26','45']"--}}
-                {{--                          style="color: #b5b5b5;">Trusted by over <strong class="text-color-light">30,000</strong> satisfied users, Porto is a huge success in the one of largest world's MarketPlace.</div>--}}
+                    <div class="tp-caption font-weight-light ws-normal text-center"
+                         data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                         data-x="center"
+                         data-y="center" data-voffset="['60','60','60','105']"
+                         data-width="['530','530','530','1100']"
+                         data-fontsize="['18','18','18','40']"
+                         data-lineheight="['26','26','26','45']"
+                         style="color: #b5b5b5;">Call <strong class="text-color-light">Customer Service </strong>
+                          And book it now 
+                    </div>
 
-                {{--                 </li>--}}
+                </li>
 
             </ul>
         </div>
@@ -251,7 +265,7 @@
         </div>
     </div>
     {{--Start About US--}}
-     @include('front.includes.about_us')
+    @include('front.includes.about_us')
     {{--End About US--}}
     <section class="section section-custom-map appear-animation" data-appear-animation="fadeInUpShorter">
         <section class="section section-default section-footer">
