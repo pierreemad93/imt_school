@@ -211,7 +211,7 @@
                          data-fontsize="['18','18','18','40']"
                          data-lineheight="['26','26','26','45']"
                          style="color: #b5b5b5;">Call <strong class="text-color-light">Customer Service </strong>
-                          And book it now
+                        And book it now
                     </div>
 
                 </li>
@@ -219,51 +219,47 @@
             </ul>
         </div>
     </div>
-    <div class="container pt-5 text-center">
+    {{--Start H2 Heading--}}
+    <div class="container text-center mt-5">
+        {{--Start Welcome To Heading--}}
         <div class="row align-items-center">
             <div class="col-sm-12">
-                <h2 class="word-rotator letters rotate-3 mb-2">
-                    <span>Welcome to </span>
-                    <span class="word-rotator-words bg-primary" style="width: 153.661px;overflow: hidden;">
-											<b class="is-visible" style="opacity: 1 ;">
-                                                <i class="out"><em>I</em></i>
-                                                <i class="out"><em>M</em></i>
-                                                <i class="out"><em>T</em></i>
-                                            </b>
-											<b style="opacity: 1;">
-                                                <i class="out"><em>S</em></i>
-                                                <i class="out"><em>c</em></i>
-                                                <i class="out"><em>h</em></i>
-                                                <i class="out"><em>o</em></i>
-                                                <i class="out"><em>o</em></i>
-                                                <i class="out"><em>l</em></i>
-                                            </b>
-                     </span>
-                    <span>The best training center in Egypt for </span>
-                    <span class="word-rotator-words bg-primary" style="width: 153.661px; overflow: hidden;">
-											<b class="is-visible" style="opacity: 1;">
-                                                <i class="out"><em>E</em></i>
-                                                <i class="out"><em>m</em></i>
-                                                <i class="out"><em>b</em></i>
-                                                <i class="out"><em>e</em></i>
-                                                <i class="out"><em>d</em></i>
-                                                <i class="out"><em>d</em></i>
-                                                <i class="out"><em>e</em></i>
-                                                <i class="out"><em>d</em></i>
-                                            </b>
-											<b style="opacity: 1;">
-                                                <i class="out"><em>S</em></i>
-                                                <i class="out"><em>y</em></i>
-                                                <i class="out"><em>s</em></i>
-                                                <i class="out"><em>t</em></i>
-                                                <i class="out"><em>e</em></i>
-                                                <i class="out"><em>m</em></i>
-                                            </b>
-                     </span>
+                <h1 class="word-rotator letters rotate-2 mb-2">
+                    <span>Welcome  To</span>
+                    <span class="word-rotator-words bg-primary" style="width: 153.641px;">
+											<b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i
+                                                    class="in"><em>M</em></i><i class="in"><em>T</em></i></b>
+											<b style="opacity: 1;"><i class="out"><em>S</em></i><i
+                                                    class="out"><em>c</em></i><i class="out"><em>h</em></i><i
+                                                    class="out"><em>o</em></i><i class="out"><em>o</em></i><i
+                                                    class="out"><em>l</em></i></b>
+										</span>
+                </h1>
+            </div>
+        </div>
+        {{--End Welcome To Heading--}}
+        {{--Start Sub  Heading--}}
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+                <h2 class="word-rotator letters rotate-2 mb-2">
+                    <span>The best Training center  in Egypt for</span>
+                    <span class="word-rotator-words bg-primary" style="width: 153.641px;">
+											<b class="is-visible" style="opacity: 1;"><i class="in"><em>E</em></i><i
+                                                    class="in"><em>m</em></i><i class="in"><em>b</em></i><i
+                                                    class="in"><em>e</em></i><i class="in"><em>d</em></i><i
+                                                    class="in"><em>d</em></i><i class="in"><em>e</em></i><i
+                                                    class="in"><em>d</em></i></b>
+											<b style="opacity: 1;"><i class="out"><em>S</em></i><i
+                                                    class="out"><em>y</em></i><i class="out"><em>s</em></i><i
+                                                    class="out"><em>t</em></i><i class="out"><em>e</em></i><i
+                                                    class="out"><em>m</em></i></b>
+										</span>
                 </h2>
             </div>
         </div>
+        {{--End Sub Heading--}}
     </div>
+    {{--End H2 Heading--}}
     {{--Start About US--}}
     @include('front.includes.about_us')
     {{--End About US--}}
