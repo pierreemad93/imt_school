@@ -211,7 +211,7 @@
                          data-fontsize="['18','18','18','40']"
                          data-lineheight="['26','26','26','45']"
                          style="color: #b5b5b5;">Call <strong class="text-color-light">Customer Service </strong>
-                          And book it now 
+                          And book it now
                     </div>
 
                 </li>
