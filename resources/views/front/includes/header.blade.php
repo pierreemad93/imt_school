@@ -8,7 +8,7 @@
                         <div class="header-logo">
                             <a href="{{url('/')}}">
                                 <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40"
-                                     data-sticky-top="25" src="{{asset('assets/front/img/imt_logo.jpg')}}" style="height:10vh">
+                                     data-sticky-top="25" src="{{asset('assets/front/img/imt_logo.png')}}" style="height:6vh">
                             </a>
                         </div>
                     </div>
