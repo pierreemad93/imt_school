@@ -10,8 +10,8 @@
     <div class="container-fluid container-fullw bg-white">
         <div class="row">
             <div class="col-md-12">
-                <h5 class="over-title margin-bottom-15"><i class="fa fa-user-plus"></i> {{$explode[0]}} <span
-                        class="text-bold">{{$explode[1]}}</span></h5>
+                <h2 class="over-title margin-bottom-15"><i class="fa fa-user-plus"></i> {{$explode[0]}} <span
+                        class="text-bold">{{$explode[1]}}</span></h2>
                 <p>
                     {{$pageDes}}
                 </p>
@@ -19,7 +19,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="panel panel-white">
                             <div class="panel-body">
-                                <form role="form" method="POST">
+                                <form role="form" method="POST" action="{{route('users.store')}}">
                                     @csrf
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
@@ -39,22 +39,22 @@
                                         <label for="exampleInputEmail1">
                                             Username
                                         </label>
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        <input type="text" class="form-control @error('name') has-error @enderror"
                                                id="exampleInputEmail1"
                                                placeholder="Enter username" name="name">
                                         @error('name')
-                                        <div class="is-invalid">{{$message}}</div>
+                                        <div class="has-error">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
                                             Email address
                                         </label>
-                                        <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        <input type="email" class="form-control @error('email') has-error @enderror"
                                                id="exampleInputEmail1"
                                                placeholder="Enter email" name="email">
                                         @error('email')
-                                        <div class="is-invalid">{{$message}}</div>
+                                        <div class="has-error">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
@@ -68,11 +68,11 @@
                                         <label for="exampleInputPassword1">
                                             Phone
                                         </label>
-                                        <input type="tel" class="form-control @error('phone') is-invalid @enderror"
+                                        <input type="tel" class="form-control @error('phone') has-error @enderror"
                                                id="exampleInputPassword1"
                                                placeholder="Enter you phone" name="phone">
                                         @error('phone')
-                                        <div class="is-invalid">{{$message}}</div>
+                                        <div class="has-error">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <button id="save_user" class="btn btn-o btn-primary">
@@ -147,29 +147,4 @@
     </div>
     {{--End Form--}}
 @endsection
-@section('scripts')
-    <script>
-        $(document).on('click', '#save_user', function (e) {
-            e.preventDefault();
-            $.ajax({
-                type: 'post',
-                url: "{{route('users.store')}}",
-                data: {
-                    '_token': "{{csrf_token()}}",
-                    'name': $("input[name='name']").val(),
-                    'email': $("input[name='email']").val(),
-                    //please hash password
-                    'password': $("input[name='password']").val(),
-                    'phone': $("input[name='phone']").val(),
-                },
-                success: function (data) {
 
-                },
-                error: function (reject) {
-
-                }
-            });
-        });
-    </script>
-
-@stop

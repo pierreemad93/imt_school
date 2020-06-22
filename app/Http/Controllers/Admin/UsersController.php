@@ -40,30 +40,13 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $data = $request->all();
-
-        $rules = [
-            'name' => 'required|unique:users,name|max:100|string',
-            'email' => 'required|unique:users,email|max:100|string',
-            'password' => 'required|string|min:8|max:32',
-        ];;
-        $validator = Validator::make($data , $rules);
-
-        if($validator->fails()){
-           return redirect()
-                             ->back()
-                             ->withErrors($validator)
-                             ->withInputs($request->all());
-        }
-
         //insert at database
         User::create([
-               'name' => $request->name,
-               'email' => $request->email,
-               'password' => $request->password,
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
 
-            ]);
+        ]);
 
     }
 
