@@ -13,7 +13,7 @@
                 <div class="row">
                     {{--Start  col-heading--}}
                     <div class="col-sm-8">
-                        <h5 class="over-title margin-bottom-15">{{$explode[0]}} <span class="text-bold">{{$explode[1]}}</span></h5>
+                        <h2 class="over-title margin-bottom-15">{{$explode[0]}} <span class="text-bold">{{$explode[1]}}</span></h2>
                         <p>
                             {{$pageDes}}
                         </p>
