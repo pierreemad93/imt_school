@@ -19,7 +19,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="panel panel-white">
                             <div class="panel-body">
-                                <form role="form" method="POST" action="{{route('users.store')}}">
+                                <form role="form" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
@@ -39,17 +39,19 @@
                                         <label for="exampleInputEmail1">
                                             Username
                                         </label>
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1"
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                               id="exampleInputEmail1"
                                                placeholder="Enter username" name="name">
                                         @error('name')
-                                           <div class="is-invalid">{{$message}}</div>
+                                        <div class="is-invalid">{{$message}}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">
                                             Email address
                                         </label>
-                                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1"
+                                        <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                               id="exampleInputEmail1"
                                                placeholder="Enter email" name="email">
                                         @error('email')
                                         <div class="is-invalid">{{$message}}</div>
@@ -66,13 +68,14 @@
                                         <label for="exampleInputPassword1">
                                             Phone
                                         </label>
-                                        <input type="tel" class="form-control @error('phone') is-invalid @enderror" id="exampleInputPassword1"
+                                        <input type="tel" class="form-control @error('phone') is-invalid @enderror"
+                                               id="exampleInputPassword1"
                                                placeholder="Enter you phone" name="phone">
                                         @error('phone')
                                         <div class="is-invalid">{{$message}}</div>
                                         @enderror
                                     </div>
-                                    <button type="submit" class="btn btn-o btn-primary">
+                                    <button id="save_user" class="btn btn-o btn-primary">
                                         Submit
                                     </button>
                                 </form>
@@ -144,3 +147,29 @@
     </div>
     {{--End Form--}}
 @endsection
+@section('scripts')
+    <script>
+        $(document).on('click', '#save_user', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: "{{route('users.store')}}",
+                data: {
+                    '_token': "{{csrf_token()}}",
+                    'name': $("input[name='name']").val(),
+                    'email': $("input[name='email']").val(),
+                    //please hash password
+                    'password': $("input[name='password']").val(),
+                    'phone': $("input[name='phone']").val(),
+                },
+                success: function (data) {
+
+                },
+                error: function (reject) {
+
+                }
+            });
+        });
+    </script>
+
+@stop

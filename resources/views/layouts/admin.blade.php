@@ -31,7 +31,7 @@
     <!-- start: CLIP-TWO CSS -->
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/admin/assets/css/themes/theme-1.css')}}" id="skin_color" />
+    <link rel="stylesheet" href="{{asset('assets/admin/assets/css/themes/theme-1.css')}}"/>
     @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
         <link rel="stylesheet" href="{{asset('assets/admin/assets/css/rtl.css')}}">
     @endif
@@ -85,6 +85,7 @@
         Index.init();
     });
 </script>
+@yield('scripts')
 <!-- end: JavaScript Event Handlers for this page -->
 <!-- end: CLIP-TWO JAVASCRIPTS -->
 </body>
