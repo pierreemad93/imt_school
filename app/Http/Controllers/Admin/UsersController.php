@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use PDF;
+use App;
 
 class UsersController extends Controller
 {
@@ -93,5 +94,39 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function pdf()
+    {
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadHTMl($this->convert_user_data_to_html());
+        return $pdf->stream();
+
+    }
+
+    public function convert_user_data_to_html()
+    {
+        $user_data = User::get();
+        $output = '  
+                      <h3>IMT Student</h3>
+                      <table width="100%" style="border-collapse: collapse; border: 0px;">
+                      <tr>
+                        <th style="border: 1px solid; padding:12px;" width="60%">Username</th>
+                        <th style="border: 1px solid; padding:12px;" width="30%">Email</th>
+                        <th style="border: 1px solid; padding:12px;" width="20%">Phone</th>  
+                      </tr>
+                    ';
+        foreach ($user_data as $user) {
+            $output .= '
+                          <tr>
+                           <td style="border: 1px solid; padding:12px;">'.$user->name.'</td>
+                           <td style="border: 1px solid; padding:12px;">'.$user->email.'</td>
+                           <td style="border: 1px solid; padding:12px;">'.$user->phone.'</td>
+                          </tr>
+            ';
+
+        }
+        $output .= '</table>';
+        return $output;
     }
 }

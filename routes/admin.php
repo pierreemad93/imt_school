@@ -16,6 +16,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::group(['namespace' => 'Admin'] , function (){
         Route::get('/dashboard','DashboardController@index')->name('admin.dashboard');
         Route::resource('/users' , 'UsersController');
+        Route::get('/imt_pdf/', 'UsersController@pdf')->name('imtPdf');
     });
 });
 

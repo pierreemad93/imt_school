@@ -12,13 +12,20 @@
             <div class="col-md-12">
                 <div class="row">
                     {{--Start  col-heading--}}
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <h5 class="over-title margin-bottom-15">{{$explode[0]}} <span class="text-bold">{{$explode[1]}}</span></h5>
                         <p>
                             {{$pageDes}}
                         </p>
                     </div>
                     {{--End  col-heading--}}
+                    {{--Start  col-pdfButton--}}
+                    <div class="col-sm-2">
+                        <a type="button" href="{{route('imtPdf')}}" class="btn btn-wide btn-danger">
+                            <i class="fa fa-file-pdf-o"></i> Convert {{$moduleName}} to PDF
+                        </a>
+                    </div>
+                    {{--End  col-pdfButton--}}
                     {{--Start  col-addButton--}}
                     <div class="col-sm-2">
                         <a type="button" href="{{route('users.create')}}" class="btn btn-wide btn-primary">
