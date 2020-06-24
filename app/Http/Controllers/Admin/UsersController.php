@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use PDF;
 use App;
@@ -39,7 +38,7 @@ class UsersController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(App\Http\Requests\Admin\userRequest $request)
     {
         //insert at database
         User::create([
