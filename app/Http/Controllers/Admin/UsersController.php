@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\User;
 use App\Http\Controllers\Controller;
 use PDF;
 use App;
+use App\Traits\uploadImageTrait;
 
 class UsersController extends Controller
 {
@@ -40,12 +40,16 @@ class UsersController extends Controller
      */
     public function store(App\Http\Requests\Admin\userRequest $request)
     {
+        //Save image
+
+        $file_name = $this->saveimage($request->photo ,'assets/common/images/users');
         //insert at database
         User::create([
+            'photo' => $file_name ,
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password,
-
+            'phone' => $request->phone,
         ]);
 
     }
