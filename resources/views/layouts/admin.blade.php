@@ -85,6 +85,8 @@
         Index.init();
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
+@include('sweet::alert')
 @yield('scripts')
 <!-- end: JavaScript Event Handlers for this page -->
 <!-- end: CLIP-TWO JAVASCRIPTS -->

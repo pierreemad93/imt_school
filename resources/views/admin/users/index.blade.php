@@ -48,7 +48,7 @@
                     <tbody>
                     @foreach($rows as $row)
                     <tr>
-                        <td class="center"><img src="{{asset('assets/common/images/users/')}}{{$row->photo}}" class="img-rounded" alt="image"></td>
+                        <td class="center"><img src="{{asset('assets/common/images/users')}}/{{$row->photo}}" class="img-rounded" alt="image" style="height:10vh"></td>
                         <td>{{$row->name}}</td>
                         <td class="hidden-xs">
                             @if($row->permission == 0)

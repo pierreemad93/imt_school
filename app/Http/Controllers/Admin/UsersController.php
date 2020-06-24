@@ -41,8 +41,11 @@ class UsersController extends Controller
     public function store(App\Http\Requests\Admin\userRequest $request)
     {
         //Save image
-
-        $file_name = $this->saveimage($request->photo ,'assets/common/images/users');
+        $file_extension=$request->photo->getClientOriginalExtension();
+        $file_name=time().'.'.$file_extension;
+        $path= 'assets/common/images/users';
+        $request->photo->move($path , $file_name);
+        // Stop use trait to solve it  issue
         //insert at database
         User::create([
             'photo' => $file_name ,
@@ -51,7 +54,8 @@ class UsersController extends Controller
             'password' => $request->password,
             'phone' => $request->phone,
         ]);
-
+        alert()->success('you are add user', 'Done')->autoclose(4000)->cancelButton();
+        return  redirect()->route('users.create');
     }
 
     /**
