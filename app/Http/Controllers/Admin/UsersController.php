@@ -47,14 +47,25 @@ class UsersController extends Controller
         $path= 'assets/common/images/users';
         $request->photo->move($path , $file_name);
         // Stop use trait to solve it  issue
-        //insert at database
-        User::create([
-            'photo' => $file_name ,
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password,
-            'phone' => $request->phone,
-        ]);
+
+        if($file_extension == null){
+            //insert at database
+            User::create([
+                'photo' => 'default-user.png' ,
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password,
+                'phone' => $request->phone,
+            ]);
+        }else{
+            User::create([
+                'photo' =>  $file_name ,
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password,
+                'phone' => $request->phone,
+            ]);
+        }
         alert()->success('you are add user', 'Done')->autoclose(4000)->cancelButton();
         return  redirect()->route('users.create');
     }

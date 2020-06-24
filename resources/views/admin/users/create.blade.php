@@ -4,6 +4,7 @@
     $pageTitle = 'Create ' .$moduleName ;
     $explode= explode(" " , $pageTitle);
     $pageDes= "Here you can  Create  ". $moduleName;
+
 @endphp
 @section('content')
     {{--Start Form--}}
@@ -92,9 +93,6 @@
                                                             <img src="{{asset('assets/admin/assets/images/default-user.png')}}" alt="">
                                                         </div>
                                                         {{--/Display defualt --}}
-                                                        @if($photo == null)
-                                                            <input type="hidden"><input type="file" value="{{asset('assets/admin/assets/images/default-user.png')}}" name="photo">
-                                                        @else
                                                             <div class="user-image-buttons">
 										                    <span class="btn btn-azure btn-file btn-sm">
                                                                 <span class="fileinput-exists">
@@ -107,7 +105,6 @@
                                                                     <i class="fa fa-times"></i>
                                                                 </a>
                                                             </div>
-                                                        @endif
                                                     </div>
                                                 </div>
                                                 <hr>
