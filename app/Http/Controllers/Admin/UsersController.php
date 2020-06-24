@@ -48,7 +48,7 @@ class UsersController extends Controller
         $request->photo->move($path , $file_name);
         // Stop use trait to solve it  issue
 
-        if($file_extension == null){
+        if(isset($file_extension)){
             //insert at database
             User::create([
                 'photo' => 'default-user.png' ,
