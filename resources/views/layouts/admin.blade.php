@@ -31,7 +31,7 @@
     <!-- start: CLIP-TWO CSS -->
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('assets/admin/assets/css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/admin/assets/css/themes/theme-1.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets/admin/assets/css/themes/theme-5.css')}}"/>
     @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
         <link rel="stylesheet" href="{{asset('assets/admin/assets/css/rtl.css')}}">
     @endif

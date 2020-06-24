@@ -21,7 +21,7 @@
                     {{--End  col-heading--}}
                     {{--Start  col-pdfButton--}}
                     <div class="col-sm-2">
-                        <a type="button" href="{{route('imtPdf')}}" class="btn btn-wide btn-danger">
+                        <a type="button" href="{{route('imtPdf')}}" target="_blank" class="btn btn-wide btn-danger">
                             <i class="fa fa-file-pdf-o"></i> Convert {{$moduleName}} to PDF
                         </a>
                     </div>
@@ -63,7 +63,7 @@
                             <a href="#" rel="nofollow" target="_blank">
                                 {{$row->email}}
                             </a></td>
-                        <td class="hidden-xs">(111)-114-1173</td>
+                        <td class="hidden-xs">{{$row->phone}}</td>
                         <td class="center">
                             <div class="visible-md visible-lg hidden-sm hidden-xs">
                                 <a href="#" class="btn btn-transparent btn-xs" tooltip-placement="top" tooltip="Edit"><i class="fa fa-pencil"></i></a>
