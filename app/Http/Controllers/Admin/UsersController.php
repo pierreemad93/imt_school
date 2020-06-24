@@ -29,7 +29,7 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view('admin.users.create');
+        return view('admin.users.create' );
     }
 
     /**
@@ -41,6 +41,7 @@ class UsersController extends Controller
     public function store(App\Http\Requests\Admin\userRequest $request)
     {
         //Save image
+        $photo = $request->photo ;
         $file_extension=$request->photo->getClientOriginalExtension();
         $file_name=time().'.'.$file_extension;
         $path= 'assets/common/images/users';

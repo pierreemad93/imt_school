@@ -87,20 +87,27 @@
                                                 <h4>Upload Your image</h4>
                                                 <div class="fileinput fileinput-new" data-provides="fileinput">
                                                     <div class="user-image">
+                                                        {{--Display defualt image here--}}
                                                         <div class="fileinput-new thumbnail">
-                                                            <img src="{{asset('assets/admin/assets/images/avatar-1-xl.jpg')}}" alt="">
+                                                            <img src="{{asset('assets/admin/assets/images/default-user.png')}}" alt="">
                                                         </div>
-                                                        <div class="fileinput-preview fileinput-exists thumbnail" style="line-height: 10px;"></div>
-                                                        <div class="user-image-buttons">
-										<span class="btn btn-azure btn-file btn-sm">
-                                            <span class="fileinput-exists"><i class="fa fa-pencil"></i></span>
-                                            <input type="hidden"><input type="file" name="photo">
-                                        </span>
-                                                            <a href="#" class="btn fileinput-exists btn-red btn-sm"
-                                                               data-dismiss="fileinput">
-                                                                <i class="fa fa-times"></i>
-                                                            </a>
-                                                        </div>
+                                                        {{--/Display defualt --}}
+                                                        @if($photo == null)
+                                                            <input type="hidden"><input type="file" value="{{asset('assets/admin/assets/images/default-user.png')}}" name="photo">
+                                                        @else
+                                                            <div class="user-image-buttons">
+										                    <span class="btn btn-azure btn-file btn-sm">
+                                                                <span class="fileinput-exists">
+                                                                    <i class="fa fa-pencil"></i>
+                                                                </span>
+                                                                <input type="hidden"><input type="file" name="photo">
+                                                            </span>
+                                                                <a href="#" class="btn fileinput-exists btn-red btn-sm"
+                                                                   data-dismiss="fileinput">
+                                                                    <i class="fa fa-times"></i>
+                                                                </a>
+                                                            </div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <hr>
