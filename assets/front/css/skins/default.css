@@ -2447,7 +2447,7 @@ html .inverted-light {
 
 .owl-carousel .owl-dots .owl-dot.active span,
 .owl-carousel .owl-dots .owl-dot:hover span {
-	background-color: #0074ad;
+	background-color: #9ecd59;
 }
 
 .owl-carousel.show-nav-title .owl-nav button[class*="owl-"],
@@ -5540,7 +5540,7 @@ html .slide-overlay.slide-overlay-gradient .slotholder:after {
 .tparrows.tparrows-carousel.tp-leftarrow,
 .tparrows.tparrows-carousel.tp-rightarrow {
 	background-color: #9ecd59;
-	border-color: #9ecd59 #9ecd59 #006699;
+	border-color: #9ecd59 #9ecd59 #9ecd59;
 	color: #9ecd59;
 }
 
@@ -5573,9 +5573,9 @@ html .slide-overlay.slide-overlay-gradient .slotholder:after {
 .tparrows.tparrows-carousel.tp-rightarrow:active,
 .tparrows.tparrows-carousel.tp-leftarrow.active,
 .tparrows.tparrows-carousel.tp-rightarrow.active {
-	background-color: #006ea6 !important;
+	background-color: #9ecd59 !important;
 	background-image: none !important;
-	border-color: #006699 #006699 #004466 !important;
+	border-color: #9ecd59 #9ecd59 #9ecd59 !important;
 }
 
 .tparrows.arrows-primary:before {

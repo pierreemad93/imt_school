@@ -51,6 +51,7 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{{asset('assets/front/css/custom.css')}}">
     <!-- Head Libs -->
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=MuseoModerno:wght@300;500&display=swap" rel="stylesheet">
     <script src="{{asset('assets/front/vendor/modernizr/modernizr.min.js')}}"></script>
 
 </head>

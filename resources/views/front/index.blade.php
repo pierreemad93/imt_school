@@ -252,7 +252,7 @@
 											<b style="opacity: 1;"><i class="out"><em>S</em></i><i
                                                     class="out"><em>y</em></i><i class="out"><em>s</em></i><i
                                                     class="out"><em>t</em></i><i class="out"><em>e</em></i><i
-                                                    class="out"><em>m</em></i></b>
+                                                    class="out"><em>m</em></i><i class="out"><em>s</em></i></b>
 										</span>
                 </h2>
             </div>

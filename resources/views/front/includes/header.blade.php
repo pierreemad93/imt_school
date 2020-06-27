@@ -1,7 +1,7 @@
 <header id="header"
         data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': false}">
     <div class="header-body">
-        <div class="header-container container">
+        <div class="container-fluid">
             <div class="header-row">
                 <div class="header-column">
                     <div class="header-row">
@@ -271,7 +271,7 @@
                                                     <a class="dropdown-item" href="{{url('/full-diploma')}}">Standard Embedded Systems Diploma</a>
                                                 </li>
                                                 <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#">Embeded System</a>
+                                                    <a class="dropdown-item" href="#">Embeded Systems</a>
                                                     <ul class="dropdown-menu">
                                                         <li>
                                                             <a class="dropdown-item"

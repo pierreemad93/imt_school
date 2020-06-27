@@ -19,7 +19,7 @@
                         <span class="d-block font-weight-light negative-ls-1 text-5 mb-1"><em class="text-2 opacity-8">About US</em></span>
                         <h2 class="font-weight-extra-bold text-color-dark negative-ls-3 line-height-1 text-7 mb-3"><em>SOME
                                 WORDS ABOUT US</em></h2>
-                        <p class="lead mb-4 pb-2">
+                        <p class="lead mb-4 pb-2" style="font-family: 'Krona One', sans-serif;color:#fff">
                             IMT School (I Make Technology School) is not a place where you can take some courses; it is
                             a place in which you practice technology. We believe that listening to someone speaking
                             about something is not a good way of learning, so, “Do it yourself” is our way.
