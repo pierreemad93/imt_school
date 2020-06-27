@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-blog.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/rtl-theme-shop.css')}}">
         @else
-        <link rel="stylesheet" href="{{asset('assets/front/css/theme-dark.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/front/css/theme.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/theme-elements.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/theme-blog.css')}}">
         <link rel="stylesheet" href="{{asset('assets/front/css/theme-shop.css')}}">

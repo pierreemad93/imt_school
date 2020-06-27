@@ -16,7 +16,7 @@
                 <div class="d-flex justify-content-center mb-4">
                     <div class="profile-image-outer-container">
                         <div class="profile-image-inner-container bg-color-primary">
-                            <img src="{{asset('assets/front/img/avatars/avatar.jpg')}}">
+                            <img src="{{asset('assets/common/images/users')}}/{{$userProfile->photo}}">
                             <span class="profile-image-button bg-color-dark"><i class="fas fa-camera text-light"></i></span>
                         </div>
                         <input type="file" id="file" class="profile-image-input">
@@ -25,8 +25,8 @@
                 <aside class="sidebar mt-2" id="sidebar">
                     <ul class="nav nav-list flex-column mb-5">
                         <li class="nav-item"><a class="nav-link text-dark active" href="#">My Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Achivment Course</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">In Progress Course</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Schedules</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Exams</a></li>
                     </ul>
                 </aside>
             </div>
@@ -35,7 +35,7 @@
                     <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">My</strong> Profile</h2>
                 </div>
                 <div class="overflow-hidden mb-4 pb-3">
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="mb-0">Edit your Profile</p>
                 </div>
                 <form role="form" class="needs-validation">
                     <div class="form-group row">
@@ -57,18 +57,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Company</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" type="text" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Website</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" type="url" value="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
                         <div class="col-lg-9">
                             <input class="form-control" type="text" value="" placeholder="Street">
@@ -81,21 +69,6 @@
                         </div>
                         <div class="col-lg-3">
                             <input class="form-control" type="text" value="" placeholder="State">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Time Zone</label>
-                        <div class="col-lg-9">
-                            <select id="user_time_zone" class="form-control" size="0">
-                                <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                <option value="Alaska">(GMT-09:00) Alaska</option>
-                                <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                <option value="Arizona">(GMT-07:00) Arizona</option>
-                                <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
