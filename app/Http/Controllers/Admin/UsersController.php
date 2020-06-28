@@ -17,7 +17,7 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $rows = User::paginate(5);
+        $rows = User::whereIn('permission' , array('0' , '2'))->paginate(5);
         return view('admin.users.index', compact('rows'));
     }
 

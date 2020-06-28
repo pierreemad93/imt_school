@@ -52,11 +52,11 @@
                         <td>{{$row->name}}</td>
                         <td class="hidden-xs">
                             @if($row->permission == 0)
-                                Student
+                                User
                             @elseif($row->permission == 1)
                                 Admin
                             @elseif($row->permission == 2)
-                                Instructor
+                                Student
                             @endif
                         </td>
                         <td class="hidden-xs">
