@@ -17,6 +17,8 @@ class CoursesController extends Controller
     public function index()
     {
         //
+        $rows=Enrollment::paginate('5');
+        return view('admin.users.pending_user', compact('rows'));
     }
 
     /**
@@ -46,7 +48,7 @@ class CoursesController extends Controller
             'coursename'=> $request->coursename,
         ]);
         alert()->success('you are enrollnement at course , WE will contact With you', 'Done')->autoclose(4000)->cancelButton();
-        return  redirect()->back();
+        return  redirect('/');
     }
 
     /**

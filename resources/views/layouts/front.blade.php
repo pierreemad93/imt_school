@@ -116,6 +116,7 @@
     ga('send', 'pageview');
 </script>
  -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
+@include('sweet::alert')
 </body>
 </html>

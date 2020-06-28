@@ -54,29 +54,34 @@
                                 <span class="title">All Users </span>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                {{-- end users--}}
-                {{-- start Course--}}
-                <li>
-                    <a href="javascript:void(0)">
-                        <div class="item-content">
-                            <div class="item-media">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <div class="item-inner">
-                                <span class="title">Courses</span><i class="icon-arrow"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <ul class="sub-menu">
                         <li>
-                            <a href="#">
-                                <span class="title">All Courses</span>
+                            <a href="{{route('courses.index')}}">
+                                <span class="title">Pending User</span>
                             </a>
                         </li>
                     </ul>
                 </li>
+                {{-- end users--}}
+                {{-- start Course--}}
+{{--                <li>--}}
+{{--                    <a href="javascript:void(0)">--}}
+{{--                        <div class="item-content">--}}
+{{--                            <div class="item-media">--}}
+{{--                                <i class="fa fa-users"></i>--}}
+{{--                            </div>--}}
+{{--                            <div class="item-inner">--}}
+{{--                                <span class="title">Courses</span><i class="icon-arrow"></i>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </a>--}}
+{{--                    <ul class="sub-menu">--}}
+{{--                        <li>--}}
+{{--                            <a href="#">--}}
+{{--                                <span class="title">All Courses</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
                 {{-- end Course--}}
             </ul>
             <!-- end: MAIN NAVIGATION MENU -->
