@@ -94,5 +94,9 @@ class CoursesController extends Controller
     public function destroy($id)
     {
         //
+        $pending=Enrollment::whereId($id)->delete();
+        alert()->success('You Are Delete Pending Dourse', 'Done')->autoclose(4000)->cancelButton();
+        return  redirect('/courses');
+
     }
 }

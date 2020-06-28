@@ -27,7 +27,7 @@
                         <th class="">Email</th>
                         <th class="">Phone</th>
                         <th class="">Course name</th>
-                        <th>Controll</th>
+                        <th>Control</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,8 +41,18 @@
                             <td class="">{{$row->phone}}</td>
                             <td>{{$row->coursename}}</td>
                             <td>
-                                <a class="btn btn-primary">Approve</a>
-                                <a class="btn btn-danger">Reject</a>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <a class="btn btn-primary">Approve</a>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <form action="{{route('courses.destroy', $row->id )}}"  method="post">
+                                            @csrf
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="submit" value="Reject" class="btn btn-danger">
+                                        </form>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     @endforeach
