@@ -86,39 +86,19 @@
             </div>
             <ul class="folders">
                 <li>
-                    <a href="pages_calendar.html">
+                    <a href="{{url('/')}}">
                         <div class="item-content">
                             <div class="item-media">
-                                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+                                <span class="fa-stack"> <i class="fa fa-sitemap fa-stack-2x"></i> <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i> </span>
                             </div>
                             <div class="item-inner">
-                                <span class="title"> Calendar </span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages_messages.html">
-                        <div class="item-content">
-                            <div class="item-media">
-                                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i> </span>
-                            </div>
-                            <div class="item-inner">
-                                <span class="title"> Messages </span>
+                                <span class="title"> Visit Site </span>
                             </div>
                         </div>
                     </a>
                 </li>
             </ul>
             <!-- end: CORE FEATURES -->
-            <!-- start: DOCUMENTATION BUTTON -->
-            <div class="wrapper">
-                <a href="documentation.html" class="button-o">
-                    <i class="ti-help"></i>
-                    <span>Documentation</span>
-                </a>
-            </div>
-            <!-- end: DOCUMENTATION BUTTON -->
         </nav>
     </div>
 </div>

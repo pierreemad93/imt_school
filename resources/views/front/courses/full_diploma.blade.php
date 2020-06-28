@@ -22,19 +22,24 @@
                         <div class="tabs tabs-vertical tabs-left tabs-navigation">
                             <ul class="nav nav-tabs col-sm-3">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#tabsNavigation1" data-toggle="tab"><i class="fas fa-info"></i> Details</a>
+                                    <a class="nav-link" href="#tabsNavigation1" data-toggle="tab"><i
+                                            class="fas fa-info"></i> Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tabsNavigation2" data-toggle="tab"><i class="fas fa-money-bill-wave"></i> Price</a>
+                                    <a class="nav-link" href="#tabsNavigation2" data-toggle="tab"><i
+                                            class="fas fa-money-bill-wave"></i> Price</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tabsNavigation3" data-toggle="tab"><i class="fas fa-stopwatch"></i>  Duration</a>
+                                    <a class="nav-link" href="#tabsNavigation3" data-toggle="tab"><i
+                                            class="fas fa-stopwatch"></i> Duration</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tabsNavigation4" data-toggle="tab"><i class="fas fa-adjust"></i> Development KIT</a>
+                                    <a class="nav-link" href="#tabsNavigation4" data-toggle="tab"><i
+                                            class="fas fa-adjust"></i> Development KIT</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tabsNavigation5" data-toggle="tab"><i class="fas fa-film"></i> Course Outline:</a>
+                                    <a class="nav-link" href="#tabsNavigation5" data-toggle="tab"><i
+                                            class="fas fa-film"></i> Course Outline:</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,8 +47,11 @@
                     <div class="col-lg-8">
                         <div class="tab-pane tab-pane-navigation active" id="tabsNavigation1">
                             <h4>Details</h4>
-                            <p>The diploma is supervised by Eng. Ahmed Ashmawy (Embedded Systems department manager in ITI).</p>
-                             <p>80% of the diploma is about making your own embedded system (Set your HW environment and start developing your projects) and the rest 20% is embedded systems concepts that you must know.</p>
+                            <p>The diploma is supervised by Eng. Ahmed Ashmawy (Embedded Systems department manager in
+                                ITI).</p>
+                            <p>80% of the diploma is about making your own embedded system (Set your HW environment and
+                                start developing your projects) and the rest 20% is embedded systems concepts that you
+                                must know.</p>
                         </div>
                         <div class="tab-pane tab-pane-navigation" id="tabsNavigation2">
                             <h4>Price</h4>
@@ -60,7 +68,8 @@
                             <p>Motors (DC, Servo and stepper motor).</p>
                             <p>Character LCD and Seven Segment Displays.</p>
                             <p>Sensors (Temperature and Light).</p>
-                            <p>Basic elements (Relay, Buzzer, Tactile switches, LEDs, Transistors, Darlington pair, Optocouplers, Op Amp, Etc).</p>
+                            <p>Basic elements (Relay, Buzzer, Tactile switches, LEDs, Transistors, Darlington pair,
+                                Optocouplers, Op Amp, Etc).</p>
                             <p>EEPROM</p>
                             <p>Other elements (USB to TTL converter, Keypad ...).</p>
                         </div>
@@ -77,6 +86,19 @@
                             <p>Embedded System Development Tools.</p>
                             <p>Graduation project.</p>
                         </div>
+                        @if(Auth::check())
+                            <form method="post" action="{{route('courses.store')}}">
+                                @csrf
+                                <input type="hidden" value="{{Auth::user()->name}}" name="name">
+                                <input type="hidden" value="{{Auth::user()->phone}}" name="phone">
+                                <input type="hidden" value="{{Auth::user()->email}}" name="email">
+                                <input type="hidden" value="full-diploma-embeddsystems" name="coursename">
+                                <input type="hidden" value="0" name="pending">
+                               <input type="submit" value="Enroll" class="btn btn-primary btn-lg">
+                            </form>
+                            @else
+                         <a href="{{route('login')}}" class="btn btn-info btn-lg">sing in to Enroll</a>
+                        @endif
                     </div>
                 </div>
             </div>

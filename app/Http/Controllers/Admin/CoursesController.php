@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Admin\Enrollment;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -36,6 +38,15 @@ class CoursesController extends Controller
     public function store(Request $request)
     {
         //
+        Enrollment::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'pending' => $request->pending,
+            'coursename'=> $request->coursename,
+        ]);
+        alert()->success('you are enrollnement at course , WE will contact With you', 'Done')->autoclose(4000)->cancelButton();
+        return  redirect()->back();
     }
 
     /**
