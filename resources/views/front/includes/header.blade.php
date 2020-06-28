@@ -296,7 +296,7 @@
                                                     <ul class="dropdown-menu">
                                                         {{-- Start if condition--}}
                                                         {{-- check permission if you are admin | auther --}}
-                                                        @if( Auth::user()->permission == '1' || Auth::user()->permission == '2')
+                                                        @if( Auth::user()->permission == '1')
                                                             <li>
                                                                 <a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard</a>
                                                             </li>

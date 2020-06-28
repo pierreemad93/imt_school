@@ -39,3 +39,4 @@ Route::get('/sec/{id}' , function ($id){
     $sec=App\Models\Admin\Course::find($id)->sechdule()->get();
     return $sec ;
 });
+

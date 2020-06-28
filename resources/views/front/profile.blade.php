@@ -136,7 +136,10 @@
                             <div class="accordion accordion-secondary" id="accordion2Secondary">
                                 {{--Start Embebedd systems--}}
                                 @foreach($Displaies as $display)
-                                    @if($display->course_name == "embedded")
+                                    @php
+                                        $test =$display->id;
+                                    @endphp
+                                    @if($display->course_name == "embedded" && $display->user_id == Auth::user()->id)
                                         <div class="card card-default">
                                             <div class="card-header">
                                                 <h4 class="card-title m-0">
@@ -157,7 +160,7 @@
                                     @endif
                                     {{--/Embebedd systems--}}
                                     {{--Start ARM--}}
-                                    @if($display->course_name == "ARM")
+                                    @if($display->course_name == "ARM" && $display->user_id == Auth::user()->id)
                                         <div class="card card-default">
                                             <div class="card-header">
                                                 <h4 class="card-title m-0">
@@ -207,62 +210,64 @@
                             </thead>
                             <tbody>
                             @foreach($coursesTime as $time)
-                                <tr>
-                                    @if($time->course_id == '1')
-                                        <td>ARM</td>
+                                @if($time->course_id == $test )
+                                    <tr>
+                                        @if($time->course_id == '1')
+                                            <td>ARM</td>
                                         @elseif($time->course_id == '2')
-                                        <td>Embedded systems FullDiploma</td>
-                                    @endif
-                                    <td>
-                                        @if($time->friday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
+                                            <td>Embedded systems FullDiploma</td>
                                         @endif
-                                    </td>
-                                    <td>
-                                        @if($time->saturday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($time->sunday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($time->monday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($time->tuesday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($time->wednesday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($time->thursday == 1)
-                                            <i class="fa fa-check-square"></i>
-                                        @else
-                                            <i class="fa fa-minus"></i>
-                                        @endif
-                                    </td>
-                                </tr>
+                                        <td>
+                                            @if($time->friday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->saturday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->sunday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->monday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->tuesday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->wednesday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($time->thursday == 1)
+                                                <i class="fa fa-check-square"></i>
+                                            @else
+                                                <i class="fa fa-minus"></i>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @endif
                             @endforeach
                             </tbody>
                         </table>
@@ -277,79 +282,6 @@
                         <div class="overflow-hidden mb-4 pb-3">
                             <p class="mb-0">Edit your Profile</p>
                         </div>
-                        <form role="form" class="needs-validation">
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First
-                                    name</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last
-                                    name</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="email" value="{{$userProfile->email}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="text" value="" placeholder="Street">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
-                                <div class="col-lg-6">
-                                    <input class="form-control" type="text" value="" placeholder="City">
-                                </div>
-                                <div class="col-lg-3">
-                                    <input class="form-control" type="text" value="" placeholder="State">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="{{$userProfile->name}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="password" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm
-                                    password</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="password" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="form-group col-lg-9">
-
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <input type="submit" value="Save" class="btn btn-primary btn-modern float-right"
-                                           data-loading-text="Loading...">
-                                </div>
-                            </div>
-                        </form>
                     </div>
                     {{--/Exam --}}
                 @endif
