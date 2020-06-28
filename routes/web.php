@@ -30,4 +30,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 });
 
 
-
+Route::get('/course' , function (){
+    $course=App\User::find(1)->course()->get();
+    return $course ;
+});

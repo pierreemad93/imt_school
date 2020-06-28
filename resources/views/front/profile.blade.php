@@ -17,88 +17,331 @@
                     <div class="profile-image-outer-container">
                         <div class="profile-image-inner-container bg-color-primary">
                             <img src="{{asset('assets/common/images/users')}}/{{$userProfile->photo}}">
-                            <span class="profile-image-button bg-color-dark"><i class="fas fa-camera text-light"></i></span>
+                            <span class="profile-image-button bg-color-dark"><i
+                                    class="fas fa-camera text-light"></i></span>
                         </div>
                         <input type="file" id="file" class="profile-image-input">
                     </div>
                 </div>
                 <aside class="sidebar mt-2" id="sidebar">
-                    <ul class="nav nav-list flex-column mb-5">
-                        <li class="nav-item"><a class="nav-link text-dark active" href="#">My Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Schedules</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Exams</a></li>
-                    </ul>
+                    <div class="tabs tabs-vertical tabs-left tabs-navigation">
+                        <ul class="nav nav-list flex-column mb-5">
+                            <li class="nav-item"><a class="nav-link text-dark active" href="#tabsNavigation1"
+                                                    data-toggle="tab">My Profile</a></li>
+                            @if($userProfile->permission == 2)
+                                <li class="nav-item"><a class="nav-link" href="#tabsNavigation2" data-toggle="tab">Content
+                                        of Course</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tabsNavigation3" data-toggle="tab">Schedules</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#tabsNavigation4"
+                                                        data-toggle="tab">Exams</a></li>
+                            @endif
+                        </ul>
+                    </div>
                 </aside>
             </div>
             <div class="col-lg-9">
-                <div class="overflow-hidden mb-1">
-                    <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">My</strong> Profile</h2>
-                </div>
-                <div class="overflow-hidden mb-4 pb-3">
-                    <p class="mb-0">Edit your Profile</p>
-                </div>
-                <form role="form" class="needs-validation">
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First name</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="">
-                        </div>
+                {{--Profile tab--}}
+                <div class="tab-pane tab-pane-navigation active" id="tabsNavigation1">
+                    <div class="overflow-hidden mb-1">
+                        <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">My</strong>
+                            Profile</h2>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last name</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="">
-                        </div>
+                    <div class="overflow-hidden mb-4 pb-3">
+                        <p class="mb-0">Edit your Profile</p>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="email" value="{{$userProfile->email}}">
+                    <form role="form" class="needs-validation">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First
+                                name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="text" value="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" type="text" value="" placeholder="Street">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last
+                                name</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="text" value="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
-                        <div class="col-lg-6">
-                            <input class="form-control" type="text" value="" placeholder="City">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="email" value="{{$userProfile->email}}">
+                            </div>
                         </div>
-                        <div class="col-lg-3">
-                            <input class="form-control" type="text" value="" placeholder="State">
+                        <div class="form-group row">
+                            <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" value="" placeholder="Street">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="text" value="{{$userProfile->name}}">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
+                            <div class="col-lg-6">
+                                <input class="form-control" type="text" value="" placeholder="City">
+                            </div>
+                            <div class="col-lg-3">
+                                <input class="form-control" type="text" value="" placeholder="State">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="password" value="">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="text" value="{{$userProfile->name}}">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm password</label>
-                        <div class="col-lg-9">
-                            <input class="form-control" required type="password" value="">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="password" value="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="form-group col-lg-9">
+                        <div class="form-group row">
+                            <label
+                                class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm
+                                password</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" required type="password" value="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="form-group col-lg-9">
 
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input type="submit" value="Save" class="btn btn-primary btn-modern float-right"
+                                       data-loading-text="Loading...">
+                            </div>
                         </div>
-                        <div class="form-group col-lg-3">
-                            <input type="submit" value="Save" class="btn btn-primary btn-modern float-right" data-loading-text="Loading...">
+                    </form>
+                </div>
+                {{--/Profile tab--}}
+                @if($userProfile->permission == 2)
+                    {{--Content Course --}}
+                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation2">
+                        <div class="overflow-hidden mb-1">
+                            <h2 class="font-weight-normal text-7 mb-0"><strong
+                                    class="font-weight-extra-bold">Course</strong>
+                                of Content</h2>
+                        </div>
+                        <div class="col-sm-12 mb-4 mb-lg-0">
+                            <div class="accordion accordion-secondary" id="accordion2Secondary">
+                                {{--Start Embebedd systems--}}
+                                @if()
+                                <div class="card card-default">
+                                    <div class="card-header">
+                                        <h4 class="card-title m-0">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2Secondary" href="#collapse2SecondaryOne" aria-expanded="false">
+                                              Full diploma Embedded Systems
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2SecondaryOne" class="collapse" style="">
+                                        <div class="card-body">
+                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                                {{--/Embebedd systems--}}
+                                {{--Start ARM--}}
+                                <div class="card card-default">
+                                    <div class="card-header">
+                                        <h4 class="card-title m-0">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2Secondary" href="#collapse2SecondaryTwo" aria-expanded="false">
+                                                ARM Diploma
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2SecondaryTwo" class="collapse" style="">
+                                        <div class="card-body">
+                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--/ARM--}}
+                            </div>
                         </div>
                     </div>
-                </form>
+                    {{--/Content Course --}}
+                    {{--Schudules --}}
+                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation3">
+                        <div class="overflow-hidden mb-1">
+                            <h2 class="font-weight-normal text-7 mb-0"><strong
+                                    class="font-weight-extra-bold">Course</strong>
+                                Schudules</h2>
+                        </div>
+                        <div class="overflow-hidden mb-4 pb-3">
+                            <p class="mb-0">Edit your Profile</p>
+                        </div>
+                        <form role="form" class="needs-validation">
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First
+                                    name</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last
+                                    name</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="email" value="{{$userProfile->email}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="text" value="" placeholder="Street">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
+                                <div class="col-lg-6">
+                                    <input class="form-control" type="text" value="" placeholder="City">
+                                </div>
+                                <div class="col-lg-3">
+                                    <input class="form-control" type="text" value="" placeholder="State">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="{{$userProfile->name}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm
+                                    password</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="form-group col-lg-9">
 
+                                </div>
+                                <div class="form-group col-lg-3">
+                                    <input type="submit" value="Save" class="btn btn-primary btn-modern float-right"
+                                           data-loading-text="Loading...">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    {{--/Schudules --}}
+                    {{--Exam --}}
+                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation4">
+                        <div class="overflow-hidden mb-1">
+                            <h2 class="font-weight-normal text-7 mb-0"><strong
+                                    class="font-weight-extra-bold">Exam</strong></h2>
+                        </div>
+                        <div class="overflow-hidden mb-4 pb-3">
+                            <p class="mb-0">Edit your Profile</p>
+                        </div>
+                        <form role="form" class="needs-validation">
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First
+                                    name</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last
+                                    name</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="email" value="{{$userProfile->email}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="text" value="" placeholder="Street">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
+                                <div class="col-lg-6">
+                                    <input class="form-control" type="text" value="" placeholder="City">
+                                </div>
+                                <div class="col-lg-3">
+                                    <input class="form-control" type="text" value="" placeholder="State">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="text" value="{{$userProfile->name}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label
+                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm
+                                    password</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" required type="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="form-group col-lg-9">
+
+                                </div>
+                                <div class="form-group col-lg-3">
+                                    <input type="submit" value="Save" class="btn btn-primary btn-modern float-right"
+                                           data-loading-text="Loading...">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    {{--/Exam --}}
+                @endif
             </div>
         </div>
 
