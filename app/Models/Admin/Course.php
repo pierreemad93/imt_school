@@ -14,4 +14,8 @@ class Course extends Model
     protected $hidden = [
         'created_at' , 'updated_at' ,
     ];
+
+    public  function  sechdule(){
+        return $this->hasMany('App\Models\Admin\Sechdule', 'course_id');
+    }
 }

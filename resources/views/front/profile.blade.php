@@ -135,39 +135,49 @@
                         <div class="col-sm-12 mb-4 mb-lg-0">
                             <div class="accordion accordion-secondary" id="accordion2Secondary">
                                 {{--Start Embebedd systems--}}
-                                @if()
-                                <div class="card card-default">
-                                    <div class="card-header">
-                                        <h4 class="card-title m-0">
-                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2Secondary" href="#collapse2SecondaryOne" aria-expanded="false">
-                                              Full diploma Embedded Systems
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2SecondaryOne" class="collapse" style="">
-                                        <div class="card-body">
-                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                @foreach($Displaies as $display)
+                                    @if($display->course_name == "embedded")
+                                        <div class="card card-default">
+                                            <div class="card-header">
+                                                <h4 class="card-title m-0">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                                       data-parent="#accordion2Secondary" href="#collapse2SecondaryOne"
+                                                       aria-expanded="false">
+                                                        Full diploma Embedded Systems
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse2SecondaryOne" class="collapse" style="">
+                                                <div class="card-body">
+                                                    <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
+                                                        vel, facilisis quis sapien.</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                @endif
-                                {{--/Embebedd systems--}}
-                                {{--Start ARM--}}
-                                <div class="card card-default">
-                                    <div class="card-header">
-                                        <h4 class="card-title m-0">
-                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2Secondary" href="#collapse2SecondaryTwo" aria-expanded="false">
-                                                ARM Diploma
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2SecondaryTwo" class="collapse" style="">
-                                        <div class="card-body">
-                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                    @endif
+                                    {{--/Embebedd systems--}}
+                                    {{--Start ARM--}}
+                                    @if($display->course_name == "ARM")
+                                        <div class="card card-default">
+                                            <div class="card-header">
+                                                <h4 class="card-title m-0">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                                       data-parent="#accordion2Secondary" href="#collapse2SecondaryTwo"
+                                                       aria-expanded="false">
+                                                        ARM Diploma
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse2SecondaryTwo" class="collapse" style="">
+                                                <div class="card-body">
+                                                    <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
+                                                        vel, facilisis quis sapien.</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                {{--/ARM--}}
+                                    @endif
+                                    {{--/ARM--}}
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -180,81 +190,82 @@
                                 Schudules</h2>
                         </div>
                         <div class="overflow-hidden mb-4 pb-3">
-                            <p class="mb-0">Edit your Profile</p>
+                            <p class="mb-0">Check your course time</p>
                         </div>
-                        <form role="form" class="needs-validation">
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">First
-                                    name</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Last
-                                    name</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Email</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="email" value="{{$userProfile->email}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2">Address</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" type="text" value="" placeholder="Street">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2"></label>
-                                <div class="col-lg-6">
-                                    <input class="form-control" type="text" value="" placeholder="City">
-                                </div>
-                                <div class="col-lg-3">
-                                    <input class="form-control" type="text" value="" placeholder="State">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Username</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="text" value="{{$userProfile->name}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Password</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="password" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label
-                                    class="col-lg-3 font-weight-bold text-dark col-form-label form-control-label text-2 required">Confirm
-                                    password</label>
-                                <div class="col-lg-9">
-                                    <input class="form-control" required type="password" value="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="form-group col-lg-9">
-
-                                </div>
-                                <div class="form-group col-lg-3">
-                                    <input type="submit" value="Save" class="btn btn-primary btn-modern float-right"
-                                           data-loading-text="Loading...">
-                                </div>
-                            </div>
-                        </form>
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wen</th>
+                                <th>Thu</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($coursesTime as $time)
+                                <tr>
+                                    @if($time->course_id == '1')
+                                        <td>ARM</td>
+                                        @elseif($time->course_id == '2')
+                                        <td>Embedded systems FullDiploma</td>
+                                    @endif
+                                    <td>
+                                        @if($time->friday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->saturday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->sunday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->monday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->tuesday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->wednesday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($time->thursday == 1)
+                                            <i class="fa fa-check-square"></i>
+                                        @else
+                                            <i class="fa fa-minus"></i>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
                     {{--/Schudules --}}
                     {{--Exam --}}

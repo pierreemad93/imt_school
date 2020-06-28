@@ -31,6 +31,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
 
 Route::get('/course' , function (){
-    $course=App\User::find(1)->course()->get();
+    $course=App\User::find(3)->course()->get();
     return $course ;
+});
+
+Route::get('/sec/{id}' , function ($id){
+    $sec=App\Models\Admin\Course::find($id)->sechdule()->get();
+    return $sec ;
 });
