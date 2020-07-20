@@ -23,6 +23,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
       Route::get('/full-diploma', function (){
           return view('front.courses.full_diploma');
       });
+    Route::get('/arm', function (){
+        return view('front.courses.arm');
+    });
       ############End Courses Route ############
        Auth::routes(['verify' => true]);
 
