@@ -270,14 +270,8 @@
                                                 <li>
                                                     <a class="dropdown-item" href="{{url('/full-diploma')}}">Standard Embedded Systems Diploma</a>
                                                 </li>
-                                                <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#">Embeded Systems</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item"
-                                                               href="shop-product-full-width.html">ARM</a>
-                                                        </li>
-                                                    </ul>
+                                                <li>
+                                                    <a class="dropdown-item" href="{{url('/arm')}}">ARM Diploma</a>
                                                 </li>
                                             </ul>
                                         </li>

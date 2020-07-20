@@ -189,9 +189,7 @@
                     {{--Schudules --}}
                     <div class="tab-pane tab-pane-navigation active" id="tabsNavigation3">
                         <div class="overflow-hidden mb-1">
-                            <h2 class="font-weight-normal text-7 mb-0"><strong
-                                    class="font-weight-extra-bold">Course</strong>
-                                Schudules</h2>
+                            <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">Course</strong>Schudules</h2>
                         </div>
                         <div class="overflow-hidden mb-4 pb-3">
                             <p class="mb-0">Check your course time</p>
