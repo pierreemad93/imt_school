@@ -155,8 +155,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <h3>Lesson 1</h3>
-                                                            <iframe src="https://player.vimeo.com/video/446235473" width="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                                        </div>
+                                                            <iframe width="250" src="https://youtu.be/3rvvpadpAh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                                        </div>
                                                         <div class="col-lg-4">
                                                             <h3>Lesson 2</h3>
                                                             <iframe src="https://player.vimeo.com/video/446235473" width="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
