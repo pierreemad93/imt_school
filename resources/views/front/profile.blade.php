@@ -125,12 +125,11 @@
                 </div>
                 {{--/Profile tab--}}
                 @if($userProfile->permission == 2)
-                    {{--Content Course --}}
-                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation2">
+                    {{-- Content Course --}}
+                    <div class="tab-pane tab-pane-navigation" id="tabsNavigation2">
                         <div class="overflow-hidden mb-1">
                             <h2 class="font-weight-normal text-7 mb-0"><strong
-                                    class="font-weight-extra-bold">Course</strong>
-                                of Content</h2>
+                                    class="font-weight-extra-bold">Course</strong>of Content</h2>
                         </div>
                         <div class="col-sm-12 mb-4 mb-lg-0">
                             <div class="accordion accordion-secondary" id="accordion2Secondary">
@@ -153,43 +152,43 @@
                                             <div id="collapse2SecondaryOne" class="collapse" style="">
                                                 <div class="card-body">
                                                     <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
-                                                            vel, facilisis quis sapien.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endif
-                                    {{--/Embebedd systems--}}
-                                    {{--Start ARM--}}
-                                    @if($display->course_name == "ARM" && $display->user_id == Auth::user()->id)
-                                        <div class="card card-default">
-                                            <div class="card-header">
-                                                <h4 class="card-title m-0">
-                                                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                                                       data-parent="#accordion2Secondary" href="#collapse2SecondaryTwo"
-                                                       aria-expanded="false">
-                                                        ARM Diploma
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapse2SecondaryTwo" class="collapse" style="">
-                                                <div class="card-body">
-                                                    <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
                                                         vel, facilisis quis sapien.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    @endif
-                                    {{--/ARM--}}
-                                @endforeach
                             </div>
+                            @endif
+                            {{--/Embebedd systems--}}
+                            {{--Start ARM--}}
+                            @if($display->course_name == "ARM" && $display->user_id == Auth::user()->id)
+                                <div class="card card-default">
+                                    <div class="card-header">
+                                        <h4 class="card-title m-0">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                               data-parent="#accordion2Secondary" href="#collapse2SecondaryTwo"
+                                               aria-expanded="false">
+                                                ARM Diploma
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2SecondaryTwo" class="collapse" style="">
+                                        <div class="card-body">
+                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
+                                                vel, facilisis quis sapien.</p>
+                                            <iframe src="https://player.vimeo.com/video/446235473" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                            {{--/ARM--}}
+                            @endforeach
                         </div>
                     </div>
                     {{--/Content Course --}}
                     {{--Schudules --}}
-                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation3">
+                    <div class="tab-pane tab-pane-navigation" id="tabsNavigation3">
                         <div class="overflow-hidden mb-1">
-                            <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">Course</strong>Schudules</h2>
+                            <h2 class="font-weight-normal text-7 mb-0"><strong
+                                    class="font-weight-extra-bold">Course</strong>Schudules</h2>
                         </div>
                         <div class="overflow-hidden mb-4 pb-3">
                             <p class="mb-0">Check your course time</p>
@@ -273,13 +272,13 @@
                     </div>
                     {{--/Schudules --}}
                     {{--Exam --}}
-                    <div class="tab-pane tab-pane-navigation active" id="tabsNavigation4">
+                    <div class="tab-pane tab-pane-navigation" id="tabsNavigation4">
                         <div class="overflow-hidden mb-1">
                             <h2 class="font-weight-normal text-7 mb-0"><strong
-                                    class="font-weight-extra-bold">Exam</strong></h2>
+                                    class="font-weight-extra-bold">Exams</strong></h2>
                         </div>
                         <div class="overflow-hidden mb-4 pb-3">
-                            <p class="mb-0">Edit your Profile</p>
+                            <p class="mb-0">Coming Soon</p>
                         </div>
                     </div>
                     {{--/Exam --}}
