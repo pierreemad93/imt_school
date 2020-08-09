@@ -153,7 +153,7 @@
                                             <div id="collapse2SecondaryOne" class="collapse" style="">
                                                 <div class="card-body">
                                                     <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
-                                                        vel, facilisis quis sapien.</p>
+                                                            vel, facilisis quis sapien.</p>
                                                     </div>
                                                 </div>
                                             </div>

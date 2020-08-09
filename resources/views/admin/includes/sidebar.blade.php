@@ -1,31 +1,13 @@
 <div class="sidebar app-aside" id="sidebar">
     <div class="sidebar-container perfect-scrollbar">
         <nav>
-            <!-- start: SEARCH FORM -->
-            <div class="search-form">
-                <a class="s-open" href="#">
-                    <i class="ti-search"></i>
-                </a>
-                <form class="navbar-form" role="search">
-                    <a class="s-remove" href="#" target=".navbar-form">
-                        <i class="ti-close"></i>
-                    </a>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <button class="btn search-button" type="submit">
-                            <i class="ti-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <!-- end: SEARCH FORM -->
             <!-- start: MAIN NAVIGATION MENU -->
             <div class="navbar-title">
                 <span>Main Navigation</span>
             </div>
             <ul class="main-navigation-menu">
                 <li class="active open">
-                    <a href="index.html">
+                    <a href="{{route('admin.dashboard')}}">
                         <div class="item-content">
                             <div class="item-media">
                                 <i class="ti-home"></i>
@@ -94,7 +76,7 @@
                     <a href="{{url('/')}}">
                         <div class="item-content">
                             <div class="item-media">
-                                <span class="fa-stack"> <i class="fa fa-sitemap fa-stack-2x"></i> <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i> </span>
+                                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa-stack-1x ti-world fa-inverse"></i> </span>
                             </div>
                             <div class="item-inner">
                                 <span class="title"> Visit Site </span>
