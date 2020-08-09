@@ -151,8 +151,21 @@
                                             </div>
                                             <div id="collapse2SecondaryOne" class="collapse" style="">
                                                 <div class="card-body">
-                                                    <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
-                                                        vel, facilisis quis sapien.</p>
+                                                    <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <h3>Lesson 1</h3>
+                                                            <iframe src="https://player.vimeo.com/video/446235473" width="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <h3>Lesson 2</h3>
+                                                            <iframe src="https://player.vimeo.com/video/446235473" width="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <h3>Lesson 3</h3>
+                                                            <iframe src="https://player.vimeo.com/video/446235473" width="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -173,9 +186,8 @@
                                     </div>
                                     <div id="collapse2SecondaryTwo" class="collapse" style="">
                                         <div class="card-body">
-                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum
-                                                vel, facilisis quis sapien.</p>
-                                            <iframe src="https://player.vimeo.com/video/446235473" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>                                        </div>
+                                            <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+                                        </div>
                                     </div>
                                 </div>
                             @endif
