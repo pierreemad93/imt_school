@@ -57,7 +57,7 @@
     @include('admin.includes.footer')
     <!-- end: FOOTER -->
     <!-- start: OFF-SIDEBAR -->
-    @include('admin.includes.off-sidebar')
+{{--    @include('admin.includes.off-sidebar')--}}
     <!-- end: OFF-SIDEBAR -->
     <!-- start: SETTINGS -->
     @include('admin.includes.settings')
